@@ -44,7 +44,7 @@ export const createContactSubmission = wrapAsync(async (req, res) => {
         await transporter.sendMail({
             from: `"Krushisetu Website" <${process.env.MAIL_USER}>`,
             to: process.env.CONTACT_RECEIVER_EMAIL,
-            replyTo: email.trim(),
+            replyTo: process.env.MAIL_USER,
             subject: `New Contact Enquiry - ${referenceNumber}`,
             text: `
 New contact enquiry received.
