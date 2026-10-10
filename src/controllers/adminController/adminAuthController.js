@@ -306,7 +306,7 @@ export const forgotPassword = wrapAsync(async (req, res) => {
      * http://localhost:5173/krushisetu
      */
     const frontendUrl =
-        `${process.env.FRONTEND_URL}/krushisetu` ||
+        `${process.env.FRONTEND_URL}` ||
         "http://localhost:5173/krushisetu";
 
     const resetUrl =
